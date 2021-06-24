@@ -175,3 +175,80 @@ export default Navbar;
 
 
 ```
+
+### Example 1C - Creating Defualt Props
+> Here we can set static props by defining them as methods. Remember this is 
+> probably strictly only for class-based components so only use as such. 
+> Here we do not need to define the props within the component within App.js 
+> because we have defined them to be the default within Navbar.js
+
+[App.js]-[#######################################]
+``` js
+// |# Header|
+// 
+
+// # Github Finder App
+// ##############################################
+import React, { Component } from 'react';
+import Navbar from './components/layout/Navbar/Navbar';
+import './App.css'
+
+class App extends Component {
+
+  // This space is used for methods (Remember  this is a class)
+  // So this area below would be this.method.  to be  seen. 
+
+  render() {
+    //  This  area is used for regular js and can be used in the return via {}.
+
+
+    return (
+      <div className='App'>
+        <Navbar />
+      </div>
+    )
+  }
+
+
+}
+
+
+export default App;
+
+
+```
+
+[Navbar.js]-[####################################]
+``` js
+// |# Header|
+// 
+
+// Just typed rce to get the react class component to show. 
+
+import React, { Component } from 'react'
+
+export class Navbar extends Component {
+  // defaultProps
+  static defaultProps = {
+    title: 'Github Finder',
+    icon: 'fab fa-github'
+  }
+
+  render() {
+    return (
+      <nav className="navbar bg-primary">
+        <h1>
+          <i className={this.props.icon} />
+          {this.props.title}
+        </h1>
+      </nav>
+    )
+  }
+}
+
+export default Navbar;
+
+
+```
+
+
