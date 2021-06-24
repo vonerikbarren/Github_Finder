@@ -1,5 +1,12 @@
 # Components, Props, and Prop Types
 
+# Table of Contents:
+- FontAwesome Information
+- Props with a Component
+- Props with an icon
+- Default Props
+- Prop Types
+
 ## Templates
 ``` js
 // |# Header|
