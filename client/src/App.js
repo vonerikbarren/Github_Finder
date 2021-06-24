@@ -13,6 +13,7 @@ class App extends Component {
     //  This  area is used for regular js and can be used in the return via {}.
 
 
+
     return (
       <div className='App'>
         <Navbar />
